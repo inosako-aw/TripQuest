@@ -1,0 +1,287 @@
+.FlipBook-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 91vh;
+    overflow: hidden;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0px;
+    transition: transform 0.5s ease;
+    position: relative;
+    font-size: 16px;
+}
+
+.page_container1{
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+.page_container2{
+    padding-right: 20px;
+}
+
+/* ページ1 */
+#page1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #38495B;
+}
+
+.decoration_top{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.decoration_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.Scroll_Vector {
+    position: absolute;
+    bottom: 19.3%;
+    right: 15%;
+}
+
+
+/*ページ2*/
+#page2{
+    max-width: 425px;
+    color: white;
+    background: url(../../public/background_img1.svg) no-repeat;
+}
+
+.worries_title1, .message_title1{
+    margin-top: 125px;
+    margin-bottom: 0;
+    border-bottom: 1px solid white ;
+}
+
+.worries_text1, .message_text1{
+    margin: 13px,0px;
+}
+
+
+
+/*ページ3*/
+#page3{
+    background: url(../../public/background_img1.svg) no-repeat;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.worries_title2{
+    margin-top: 90px;
+    margin-right: 15px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+}
+
+.worries_text2, .message_text2{
+    margin-top: 125px;
+    line-height: 3;
+    letter-spacing: 0.4rem;
+    font-size: 1rem;
+}
+
+
+/*ページ4*/
+#page4{
+    max-width: 425px;
+    color: white;
+    background: url(../../public/message_img1.svg) no-repeat;
+}
+
+
+/*ページ5*/
+#page5{
+    background: url(../../public/message_img1.svg) no-repeat;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.message_title2{
+    margin-top: 100px;
+    margin-right: 15px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+}
+
+/*ページ6*/
+#page6{
+    background: url(../../public/background_book.svg) no-repeat;
+}
+
+.text-container{
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    margin: 25px;
+    height: 54%;
+}
+
+.quest_place{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    color: white;
+}
+
+.quest_access{
+    position: absolute;
+    top: 195px;
+    left: 10px;
+}
+
+.quest_access a{
+    color: white;
+    text-decoration: none;
+}
+
+.quest_title1{
+    margin-right: -20px;
+}
+
+.quest_clear{
+    position: absolute;
+    left: 20px;
+}
+
+.quest_text{
+    padding: 50px;
+    background: url(../../public/background_card.png) no-repeat;
+}
+
+/*ページ7*/
+#page7{
+    background: url(../../public/background_book.svg) no-repeat;
+}
+
+/*ページ8*/
+#page8{
+    background: url(../../public/background_book.svg) no-repeat;
+}
+
+
+/*フェードイン・アウト*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* 必要に応じて調整 */
+    overflow: hidden;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-image.visible {
+    opacity: 1;
+}
+
+.fade-image.hidden {
+    opacity: 0;
+}
+
+/*ページ9*/
+#page9 img{
+    width: 100%;
+}
+
+/* フェードアウトアニメーション */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none; /* フェードアウト中にクリックを無効化 */
+}
+
+.hidden-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden-text.visible {
+    opacity: 1;
+    margin-top: 20px;
+    position: absolute;
+    right: 40%;
+}
+
+
+/* アニメーション定義 */
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* .Scroll_circle にアニメーションを適用 */
+.Scroll_circle1 {
+    position: absolute;
+    bottom: 14.3vh;
+    right: 7vw;
+    width: 100px; /* 必要に応じて調整 */
+    height: 100px; /* 必要に応じて調整 */
+    border-radius: 50%; /* 円形にする */
+    animation: rotateClockwise 10s linear infinite; /* アニメーション適用 */
+}
+
+.Scroll_Vector1{
+    position: absolute;
+    bottom: 19vh;
+    right: 17vw;
+}
+
+
+.Scroll_circle2 {
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    width: 100px; /* 必要に応じて調整 */
+    height: 100px; /* 必要に応じて調整 */
+    border-radius: 50%; /* 円形にする */
+    animation: rotateClockwise 10s linear infinite; /* アニメーション適用 */
+}
+
+.Scroll_Vector2{
+    position: absolute;
+    bottom: 7.5vh;
+    right: 13vw;
+}
+
+
